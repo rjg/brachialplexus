@@ -1,0 +1,53 @@
+@import "compass";
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/typography/lists";
+
+ul.tabNavigation {
+  @include inline-block-list-container;
+  @include no-bullets;
+  li {
+    @include inline-block-list-item;
+  }
+}
+
+.highlighted {
+  fill: #76B74A;
+  stroke: red;
+}
+
+.answer {
+  &:hover{
+    background-color: red;
+    opacity: 0.5;
+    cursor: pointer;
+  };
+}
+
+div#schematic {
+  background-color: #ddd;
+  position: absolute;
+  height: 200px;
+  width: 500px;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0.6;
+  div {
+    height: 50px;
+    width: 50px;
+    float: left;    
+  }
+  #axillary {
+    background-color: steelblue;    
+  }
+  #C5 {
+    background-color: red;    
+  }
+  #musculocutaneous {
+    background-color:#FFF;
+  }
+}
+
+#next-question {
+  cursor: pointer;
+}
