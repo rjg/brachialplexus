@@ -64,6 +64,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 6, ../../scss/screen.scss */
+body {
+  background: url("bg.png") repeat;
+}
+
+/* line 10, ../../scss/screen.scss */
 ul.tabNavigation {
   margin: 0;
   padding: 0;
@@ -71,6 +76,7 @@ ul.tabNavigation {
   overflow: hidden;
   *zoom: 1;
   list-style: none;
+  margin-left: 294px;
 }
 /* line 11, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/lists/_bullets.scss */
 ul.tabNavigation li {
@@ -78,7 +84,12 @@ ul.tabNavigation li {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 9, ../../scss/screen.scss */
+/* line 14, ../../scss/screen.scss */
+ul.tabNavigation .selected {
+  background-color: #FBFBFB;
+  border-top: 1px solid #999;
+}
+/* line 18, ../../scss/screen.scss */
 ul.tabNavigation li {
   list-style-image: none;
   list-style-type: none;
@@ -94,50 +105,173 @@ ul.tabNavigation li {
 ul.tabNavigation li {
   *display: inline;
 }
+/* line 20, ../../scss/screen.scss */
+ul.tabNavigation li a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+  font-family: 'Yanone Kaffeesatz', Helvetica, sans-serif;
+  opacity: 0.4;
+  color: #262C26;
+  font-size: 140%;
+  font-weight: bold;
+  margin: 30px 1px 0 0;
+  line-height: 38px;
+  padding: 0px 10px;
+  display: block;
+}
+/* line 6, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_unstyled-link.scss */
+ul.tabNavigation li a:active, ul.tabNavigation li a:focus {
+  outline: none;
+}
+/* line 31, ../../scss/screen.scss */
+ul.tabNavigation li a:hover {
+  color: black;
+}
+/* line 35, ../../scss/screen.scss */
+ul.tabNavigation li .quiz-button {
+  color: steelblue;
+}
+/* line 37, ../../scss/screen.scss */
+ul.tabNavigation li .quiz-button:hover {
+  color: #00568C;
+}
 
-/* line 14, ../../scss/screen.scss */
+/* line 45, ../../scss/screen.scss */
 .highlighted {
   fill: #76B74A;
   stroke: red;
 }
 
-/* line 20, ../../scss/screen.scss */
-.answer:hover {
-  background-color: red;
-  opacity: 0.5;
-  cursor: pointer;
-}
-
-/* line 27, ../../scss/screen.scss */
+/* line 50, ../../scss/screen.scss */
 div#schematic {
-  background-color: #ddd;
   position: absolute;
-  height: 200px;
-  width: 500px;
-  bottom: 20px;
-  left: 20px;
+  height: 145px;
+  width: 310px;
+  bottom: 0px;
+  left: 0px;
   opacity: 0.6;
+  padding: 10px;
+  z-index: 100;
 }
-/* line 35, ../../scss/screen.scss */
+/* line 59, ../../scss/screen.scss */
 div#schematic div {
   height: 50px;
   width: 50px;
   float: left;
 }
-/* line 40, ../../scss/screen.scss */
+/* line 64, ../../scss/screen.scss */
 div#schematic #axillary {
   background-color: steelblue;
 }
-/* line 43, ../../scss/screen.scss */
+/* line 67, ../../scss/screen.scss */
 div#schematic #C5 {
   background-color: red;
 }
-/* line 46, ../../scss/screen.scss */
+/* line 70, ../../scss/screen.scss */
 div#schematic #musculocutaneous {
   background-color: #FFF;
 }
 
-/* line 51, ../../scss/screen.scss */
+/* line 75, ../../scss/screen.scss */
 #next-question {
   cursor: pointer;
+}
+
+/* line 79, ../../scss/screen.scss */
+#anterior, #posterior, #superior, #quiz {
+  background: #FDFDFD;
+  position: relative;
+  border: solid 4px #ccc;
+  height: 650px;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+}
+
+/* line 89, ../../scss/screen.scss */
+#quiz {
+  padding: 10px 20px;
+  height: 630px;
+  width: 910px;
+  font-family: Georgia, "Times New Roman", serif;
+}
+/* line 95, ../../scss/screen.scss */
+#quiz .question-number {
+  font-weight: bold;
+}
+/* line 99, ../../scss/screen.scss */
+#quiz .answer-group {
+  margin-top: 10px;
+}
+/* line 103, ../../scss/screen.scss */
+#quiz .answer {
+  background: white;
+  border-top: 1px solid #E4E4E4;
+  border-bottom: 1px solid #E4E4E4;
+  color: #444;
+  display: block;
+  padding: 12px 5% 12px 5%;
+}
+/* line 110, ../../scss/screen.scss */
+#quiz .answer:hover {
+  cursor: pointer;
+  background-color: #FFFFF0;
+}
+/* line 116, ../../scss/screen.scss */
+#quiz .hint {
+  margin-top: 20px;
+  background: #F1F1F1;
+  color: #555;
+  padding: 12px 5% 12px 5%;
+}
+/* line 124, ../../scss/screen.scss */
+#quiz #next-question, #quiz #previous-question {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  border: 1px solid lightGrey;
+  color: #555 !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  height: 20px;
+  display: inline-block;
+  margin: 0 5px 20px 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 8px 10px 0 10px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  background: url("button.png");
+}
+/* line 141, ../../scss/screen.scss */
+#quiz #next-question:hover, #quiz #previous-question:hover {
+  cursor: pointer;
+  border: 1px solid #c4c4c4;
+}
+/* line 146, ../../scss/screen.scss */
+#quiz #next-question {
+  right: 20px;
+}
+/* line 147, ../../scss/screen.scss */
+#quiz #previous-question {
+  left: 20px;
+}
+
+/* line 150, ../../scss/screen.scss */
+#container {
+  display: block;
+  width: 950px;
+  margin: 0px auto;
+  height: 100%;
+}
+
+/* line 158, ../../scss/screen.scss */
+#viewer {
+  position: absolute;
 }

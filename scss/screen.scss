@@ -3,35 +3,59 @@
 @import "compass/css3";
 @import "compass/typography/lists";
 
+body {
+  background: url('bg.png') repeat;
+}
+
 ul.tabNavigation {
   @include inline-block-list-container;
   @include no-bullets;
+  margin-left:294px;
+  .selected{
+    background-color: #FBFBFB;
+    border-top: 1px solid #999;
+  }
   li {
     @include inline-block-list-item;
-  }
-}
+    a {
+      @include unstyled-link;
+      font-family: 'Yanone Kaffeesatz', Helvetica, sans-serif;
+      opacity: 0.4;
+      color: #262C26;
+      font-size: 140%;
+      font-weight: bold;
+      margin: 30px 1px 0 0;      
+      line-height:38px;
+      padding: 0px 10px;
+      display: block;      
+      &:hover{
+        color: black;
+      };
+    };
+    .quiz-button{
+      color: steelblue;
+      &:hover{
+        color: #00568C;
+      };
+    }
+    
+  };
+};
 
 .highlighted {
   fill: #76B74A;
   stroke: red;
 }
 
-.answer {
-  &:hover{
-    background-color: red;
-    opacity: 0.5;
-    cursor: pointer;
-  };
-}
-
 div#schematic {
-  background-color: #ddd;
   position: absolute;
-  height: 200px;
-  width: 500px;
-  bottom: 20px;
-  left: 20px;
+  height: 145px;
+  width: 310px;
+  bottom: 0px;
+  left: 0px;
   opacity: 0.6;
+  padding: 10px;
+  z-index: 100;
   div {
     height: 50px;
     width: 50px;
@@ -50,4 +74,87 @@ div#schematic {
 
 #next-question {
   cursor: pointer;
+}
+
+#anterior, #posterior, #superior, #quiz {
+  background: #FDFDFD;
+  position: relative;
+  border: solid 4px #ccc;
+  height: 650px;
+  float:left;
+  margin-right:10px;
+  width: 950px;
+}
+
+#quiz {
+  padding: 10px 20px;
+  height: 630px;
+  width: 910px;
+  font-family: Georgia, "Times New Roman", serif;
+
+  .question-number{
+    font-weight: bold;
+  }
+
+  .answer-group{
+    margin-top: 10px;
+  }
+  
+  .answer {
+    background: white;
+    border-top: 1px solid #E4E4E4;
+    border-bottom: 1px solid #E4E4E4;
+    color: #444;
+    display: block;
+    padding: 12px 5% 12px 5%;
+    &:hover{          
+      cursor: pointer;
+      background-color: #FFFFF0;
+    };
+  }
+  
+  .hint{
+    margin-top: 20px;
+    background: #F1F1F1;
+    color: #555;
+    padding: 12px 5% 12px 5%;
+  }
+  
+  
+  #next-question, #previous-question{
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    border: 1px solid lightGrey;
+    color: #555 !important;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+    height: 20px;
+    display: inline-block;
+    margin: 0 5px 20px 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 8px 10px 0 10px;
+    @include border-radius(3px);
+    background: url('button.png');
+    &:hover{          
+      cursor: pointer;
+      border: 1px solid #c4c4c4;
+    };
+  }
+  #next-question{ right: 20px;}
+  #previous-question { left:20px;}
+}
+
+#container {
+  display: block;
+  width: 950px;
+  margin: 0px auto;
+  height: 100%;
+  
+}
+
+#viewer {
+  position:absolute;
 }
