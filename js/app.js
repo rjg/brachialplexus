@@ -18,7 +18,7 @@ BP.TabManager = {
         }
         
         return false;
-    }).filter(':last').click();
+    }).filter(':first').click();
                 
   }
 };
