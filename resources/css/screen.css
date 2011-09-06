@@ -186,25 +186,26 @@ div#schematic #musculocutaneous {
   height: 500px;
   float: left;
   margin-right: 10px;
+  margin-bottom: 50px;
   width: 950px;
 }
 
-/* line 89, ../../scss/screen.scss */
+/* line 90, ../../scss/screen.scss */
 #quiz {
   padding: 10px 20px;
   height: 630px;
   width: 910px;
   font-family: Georgia, "Times New Roman", serif;
 }
-/* line 95, ../../scss/screen.scss */
+/* line 96, ../../scss/screen.scss */
 #quiz .question-number {
   font-weight: bold;
 }
-/* line 99, ../../scss/screen.scss */
+/* line 100, ../../scss/screen.scss */
 #quiz .answer-group {
   margin-top: 10px;
 }
-/* line 103, ../../scss/screen.scss */
+/* line 104, ../../scss/screen.scss */
 #quiz .answer {
   background: white;
   border-top: 1px solid #E4E4E4;
@@ -213,19 +214,19 @@ div#schematic #musculocutaneous {
   display: block;
   padding: 12px 5% 12px 5%;
 }
-/* line 110, ../../scss/screen.scss */
+/* line 111, ../../scss/screen.scss */
 #quiz .answer:hover {
   cursor: pointer;
   background-color: #FFFFF0;
 }
-/* line 116, ../../scss/screen.scss */
+/* line 117, ../../scss/screen.scss */
 #quiz .hint {
   margin-top: 20px;
   background: #F1F1F1;
   color: #555;
   padding: 12px 5% 12px 5%;
 }
-/* line 124, ../../scss/screen.scss */
+/* line 125, ../../scss/screen.scss */
 #quiz #next-question, #quiz #previous-question {
   position: absolute;
   bottom: 20px;
@@ -249,21 +250,21 @@ div#schematic #musculocutaneous {
   border-radius: 3px;
   background: url("button.png");
 }
-/* line 141, ../../scss/screen.scss */
+/* line 142, ../../scss/screen.scss */
 #quiz #next-question:hover, #quiz #previous-question:hover {
   cursor: pointer;
   border: 1px solid #c4c4c4;
 }
-/* line 146, ../../scss/screen.scss */
+/* line 147, ../../scss/screen.scss */
 #quiz #next-question {
   right: 20px;
 }
-/* line 147, ../../scss/screen.scss */
+/* line 148, ../../scss/screen.scss */
 #quiz #previous-question {
   left: 20px;
 }
 
-/* line 150, ../../scss/screen.scss */
+/* line 151, ../../scss/screen.scss */
 #container {
   display: block;
   width: 950px;
@@ -271,7 +272,7 @@ div#schematic #musculocutaneous {
   height: 100%;
 }
 
-/* line 158, ../../scss/screen.scss */
+/* line 159, ../../scss/screen.scss */
 #viewer {
   position: absolute;
 }
