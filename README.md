@@ -5,3 +5,5 @@
     
 
 Demo: [Brachial Plexus Teaching Tool](http://rjg.github.com/brachialplexus "Brachial Plexus Teaching Tool")
+
+Note: This is still very much a work in progress.  Please check back soon for more.
